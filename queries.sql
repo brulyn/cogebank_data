@@ -76,3 +76,17 @@ CREATE TABLE stakehold(
         feed_date varchar(20),
         feed_status varchar(2)
 );
+
+
+--ntwrkperf table creation
+CREATE TABLE ntwrkperf(
+        country varchar(2),
+        le_book varchar(3),
+        year_month int,
+        switch_session_category int,
+        network_breakdown_hours int,
+        comm_breakdown_hours int,
+        total_hours int,
+        feed_date varchar(20),
+        feed_status varchar(2)
+);

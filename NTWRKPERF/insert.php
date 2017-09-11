@@ -14,7 +14,7 @@
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <title>MGT INFO</title>
+    <title>Switch Info</title>
 </head>
 <body>
 <div class="container">
@@ -24,63 +24,33 @@
     
     //Insert Data
     
-    $stmt = $pdo->prepare("INSERT INTO mgtinfo (
+    $stmt = $pdo->prepare("INSERT INTO ntwrkperf (
         country,
         le_book,
         year_month,
-        staff_id,
-        mgt_member_type,
-        executive_flag,
-        company_name_01,
-        company_name_02,
-        company_name_03,
-        broad_committee_01,
-        broad_committee_02,
-        broad_committee_03,
-        broad_committee_04,
-        mgt_committee_01,
-        mgt_committee_02,
-        mgt_committee_03,
-        mgt_committee_04,
+        switch_session_category,
+        network_breakdown_hours,
+        comm_breakdown_hours,
+        total_hours,
         feed_date,
         feed_status
             ) VALUES (
-                :country, 
+                :country,
                 :le_book,
                 :year_month,
-                :staff_id,
-                :mgt_member_type,
-                :executive_flag,
-                :company_name_01,
-                :company_name_02,
-                :company_name_03,
-                :broad_committee_01,
-                :broad_committee_02,
-                :broad_committee_03,
-                :broad_committee_04,
-                :mgt_committee_01,
-                :mgt_committee_02,
-                :mgt_committee_03,
-                :mgt_committee_04,
+                :switch_session_category,
+                :network_breakdown_hours,
+                :comm_breakdown_hours,
+                :total_hours,
                 :feed_date,
                 :feed_status)");
     $stmt->bindParam(':country', $country);
     $stmt->bindParam(':le_book', $le_book);
     $stmt->bindParam(':year_month', $year_month);
-    $stmt->bindParam(':staff_id', $staff_id);
-    $stmt->bindParam(':mgt_member_type', $mgt_member_type);
-    $stmt->bindParam(':executive_flag', $executive_flag);
-    $stmt->bindParam(':company_name_01', $company_name_01);
-    $stmt->bindParam(':company_name_02', $company_name_02);
-    $stmt->bindParam(':company_name_03', $company_name_03);
-    $stmt->bindParam(':broad_committee_01', $broad_committee_01);
-    $stmt->bindParam(':broad_committee_02', $broad_committee_02);
-    $stmt->bindParam(':broad_committee_03', $broad_committee_03);
-    $stmt->bindParam(':broad_committee_04', $broad_committee_04);
-    $stmt->bindParam(':mgt_committee_01', $mgt_committee_01);
-    $stmt->bindParam(':mgt_committee_02', $mgt_committee_02);
-    $stmt->bindParam(':mgt_committee_03', $mgt_committee_03);
-    $stmt->bindParam(':mgt_committee_04', $mgt_committee_04);
+    $stmt->bindParam(':switch_session_category', $switch_session_category);
+    $stmt->bindParam(':network_breakdown_hours', $network_breakdown_hours);
+    $stmt->bindParam(':comm_breakdown_hours', $comm_breakdown_hours);
+    $stmt->bindParam(':total_hours', $total_hours);
     $stmt->bindParam(':feed_date', $feed_date);
     $stmt->bindParam(':feed_status', $feed_status);
     
@@ -88,22 +58,13 @@
     $country = $_POST['country'];
     $le_book = $_POST['le_book'];
     $year_month = $_POST['year_month'];
-    $staff_id = $_POST['staff_id'];
-    $mgt_member_type = $_POST['mgt_member_type'];
-    $executive_flag = $_POST['executive_flag'];
-    $company_name_01 = $_POST['company_name_01'];
-    $company_name_02 = $_POST['company_name_02'];
-    $company_name_03 = $_POST['company_name_03'];
-    $broad_committee_01 = $_POST['broad_committee_01'];
-    $broad_committee_02 = $_POST['broad_committee_02'];
-    $broad_committee_03 = $_POST['broad_committee_03'];
-    $broad_committee_04 = $_POST['broad_committee_04'];
-    $mgt_committee_01 = $_POST['mgt_committee_01'];
-    $mgt_committee_02 = $_POST['mgt_committee_02'];
-    $mgt_committee_03 = $_POST['mgt_committee_03'];
-    $mgt_committee_04 = $_POST['mgt_committee_04'];
+    $switch_session_category = $_POST['switch_session_category'];
+    $network_breakdown_hours = $_POST['network_breakdown_hours'];
+    $comm_breakdown_hours = $_POST['comm_breakdown_hours'];
+    $total_hours = $_POST['total_hours'];
     $feed_date = $_POST['feed_date'];
     $feed_status = $_POST['feed_status'];
+
     $country = $_POST['country'];
     if(isset($_POST['country'])){
         $stmt->execute();

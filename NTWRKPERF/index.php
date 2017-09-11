@@ -17,7 +17,7 @@
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <title>Management Info</title>
+    <title>Switch Performance</title>
 </head>
 <body>
     <?php
@@ -25,7 +25,7 @@
     ?>
     <div class="container">
     
-        <h1>Management Info</h1>
+        <h1>Switch Performance</h1>
 
         <div class="card">
             <div class="card-body">
@@ -47,87 +47,32 @@
                         <input type="number" class="form-control" maxlength="6" required="true" name="year_month">
                     </div>
                     <div class="col col-md-4">
-                        <label for="staff_id">Staff ID</label>
-                        <input type="text" class="form-control" maxlength="10" required="true" name="staff_id">
+                        <label for="switch_session_category">Switch Session Category</label>
+                        <select name="switch_session_category" class="form-control">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                        </select>
+                        
                     </div>
                 </div>   
 
                 <div class="row form-group">
                     <div class="col col-md-4">
-                        <label for="mgt_member_type">MGT Member Type</label>
-                        <select name="mgt_member_type" class="form-control">
-                            <option value="1">Board Member</option>
-                            <option value="2">Other Directorship</option>
-                        </select>
+                        <label for="network_breakdown_hours">Network breakdown hours</label>
+                        <input type="number" class="form-control" min="1" max="9999" required="true" name="network_breakdown_hours">                        
                     </div>
                     <div class="col col-md-4">
-                        <label for="executive_flag">Executive Flag</label>
-                        <select name="executive_flag" class="form-control">
-                            <option value="Y">Y</option>
-                            <option value="N">N</option>
-                        </select>
+                        <label for="comm_breakdown_hours">Comm breakdown hours</label>
+                        <input type="number" class="form-control" min="1" max="99999" required="true" name="comm_breakdown_hours">
                     </div>
                 </div> 
 
                 <div class="row form-group">
                     <div class="col col-md-4">
-                        <label for="company_name_01">Company Name 01</label>
-                        <input type="text" class="form-control" maxlength="100" name="company_name_01">
-                    </div>
-                    <div class="col col-md-4">
-                        <label for="company_name_02">Company Name 02</label>
-                        <input type="text" class="form-control" maxlength="100" name="company_name_02">
-                    </div>
-                </div>
-
-                <div class="row form-group">
-                    <div class="col col-md-4">
-                        <label for="company_name_03">Company Name 03</label>
-                        <input type="text" class="form-control" maxlength="100" name="company_name_03">
-                    </div>
-                    <div class="col col-md-4">
-                        <label for="broad_committee_01">Broad Committee 01</label>
-                        <input type="text" class="form-control" maxlength="100" name="broad_committee_01">
-                    </div>
-                </div>
-
-                <div class="row form-group">
-                    <div class="col col-md-4">
-                        <label for="broad_committee_02">Broad Committee 02</label>
-                        <input type="text" class="form-control" maxlength="100" name="broad_committee_02">
-                    </div>
-                    <div class="col col-md-4">
-                        <label for="broad_committee_03">Broad Committee 03</label>
-                        <input type="text" class="form-control" maxlength="100" name="broad_committee_03">
-                    </div>
-                </div>
-
-                <div class="row form-group">
-                    <div class="col col-md-4">
-                        <label for="broad_committee_04">Broad Committee 04</label>
-                        <input type="text" class="form-control" maxlength="100" name="broad_committee_04">
-                    </div>
-                    <div class="col col-md-4">
-                        <label for="management_committee_01">Management Committee 01</label>
-                        <input type="text" class="form-control" maxlength="100" name="mgt_committee_01">
-                    </div>
-                </div>
-
-                <div class="row form-group">
-                    <div class="col col-md-4">
-                        <label for="management_committee_02">Management Committee 02</label>
-                        <input type="text" class="form-control" maxlength="100" name="mgt_committee_02">
-                    </div>
-                    <div class="col col-md-4">
-                        <label for="management_committee_03">Management Committee 03</label>
-                        <input type="text" class="form-control" maxlength="100" name="mgt_committee_03">
-                    </div>
-                </div>
-
-                <div class="row form-group">
-                    <div class="col col-md-4">
-                        <label for="management_committee_04">Management Committee 04</label>
-                        <input type="text" class="form-control" maxlength="100" name="mgt_committee_04">
+                        <label for="total_hours">Total Hours</label>
+                        <input type="number" class="form-control" min="1" max="99999" required="true" name="total_hours">
                     </div>
                     <div class="col col-md-4">
                         <label for="feed_date">Feed Date</label>
