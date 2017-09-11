@@ -26,11 +26,14 @@
     <div class="container">
         <h1>Fraud Transactions</h1>
 
-        <div class="card">
-            <div class="card-body">
-                
-            </div>
-        </div>
+        <!-- Get all -->
+
+        <?php
+
+        
+
+
+?>
     </div>
 </body>
 </html>

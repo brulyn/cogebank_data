@@ -27,11 +27,7 @@
     
         <h1>Stakehold Details</h1>
 
-        <div class="card">
-            <div class="card-body">
-                
-            </div>
-        </div>
+        <!-- Get all -->
     </div>
 </body>
 </html>
