@@ -90,3 +90,47 @@ CREATE TABLE ntwrkperf(
         feed_date varchar(20),
         feed_status varchar(2)
 );
+
+
+--suspitxn table creation
+CREATE TABLE suspitxn(
+        country varchar(2),
+        le_book varchar(3),
+        business_date varchar(20),
+        fraud_report_type varchar(10),
+        fraud_sequence int,
+        vision_ouc varchar(10),
+        account_number varchar(20),
+        surname varchar(80),
+        first_name varchar(80),
+        middle_name varchar(80),
+        postal_address varchar(250),
+        date_of_birth varchar(20),
+        passport_number varchar(10),
+        occupation int,
+        identity_verified varchar(10),
+        relationship_report_entity varchar(10),
+        action_taken varchar(10),
+        resignation_date varchar(20),
+        transaction_date varchar(20),
+        transaction_narration varchar(45),
+        currency varchar(3),
+        currency varchar(3),
+        fraud_amount_fcy int,
+        fraud_amount_lcy int,
+        amount_paid_fcy int,
+        amount_paid_lcy int,
+        source_of_fund varchar(45),
+        destination_fund varchar(45),
+        basis_of_suspicion varchar(45),
+        material_impact varchar(10),
+        impact_description varchar(45),
+        authority varchar(45),
+        how_notified varchar(45),
+        other_action varchar(45),
+        reporting_officer_name varchar(45),
+        reporting_officer_position varchar(45),
+        feed_date varchar(20),
+        feed_status varchar(2)
+);
+

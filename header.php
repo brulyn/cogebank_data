@@ -22,7 +22,20 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             
             <ul class="nav navbar-nav navbar-right">
-                
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">View <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                    <li><a href="http://localhost/data/fraudtxn/get.php">Fraud Transactions</a></li>
+                    <li><a href="http://localhost/data/mgtinfo/get.php">Management info</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="http://localhost/data/shmembers/get.php">Shareholder Percentage</a></li>
+                    <li><a href="http://localhost/data/stakehold/get.php">Stakehold details</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="http://localhost/data/ntwrkperf/get.php">Switch Perfomance</a></li>
+                    <li><a href="http://localhost/data/suspitxn/get.php">Suspicious Transactions</a></li>
+                    </ul>
+                </li>
+
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Data Entry <span class="caret"></span></a>
                     <ul class="dropdown-menu">
@@ -32,8 +45,8 @@
                     <li><a href="http://localhost/data/shmembers/">Shareholder Percentage</a></li>
                     <li><a href="http://localhost/data/stakehold/">Stakehold details</a></li>
                     <li role="separator" class="divider"></li>
-                    <li><a href="http://localhost/data/suspitxn/">Suscpicious Transactions</a></li>
-                    <li><a href="http://localhost/data/netwperf/">Stakehold details</a></li>
+                    <li><a href="http://localhost/data/ntwrkperf/">Switch Perfomance</a></li>
+                    <li><a href="http://localhost/data/suspitxn/">Suspicious Transactions</a></li>
                     </ul>
                 </li>
             </ul>

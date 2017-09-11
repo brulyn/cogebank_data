@@ -24,7 +24,7 @@
     require_once('../header.php');
     ?>
     <div class="container">
-        <h1>Sharehold Details</h1>
+        <h1>Stakehold Details</h1>
 
         <div class="card">
             <div class="card-body">
