@@ -14,64 +14,73 @@
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <title>Document</title>
+    <title>MGT INFO</title>
 </head>
 <body>
-  <?php
-    require_once('../header.php');
-    ?>
-  <div class="container">
-  <?php
+<div class="container">
+<?php
     //DB Connection
     require_once('../dbconnect.php');
     
     //Insert Data
     
-    $stmt = $pdo->prepare("INSERT INTO stakehold (
+    $stmt = $pdo->prepare("INSERT INTO mgtinfo (
         country,
         le_book,
         year_month,
-        postal_address,
-        physical_address,
-        telephone,
-        email,
-        fax,
-        registration_date,
-        commencement_date,
-        date_of_first_license,
-        last_license_renewal,
-        license_number,
+        staff_id,
+        mgt_member_type,
+        executive_flag,
+        company_name_01,
+        company_name_02,
+        company_name_03,
+        broad_committee_01,
+        broad_committee_02,
+        broad_committee_03,
+        broad_committee_04,
+        mgt_committee_01,
+        mgt_committee_02,
+        mgt_committee_03,
+        mgt_committee_04,
         feed_date,
         feed_status
             ) VALUES (
-                :country,
+                :country, 
                 :le_book,
                 :year_month,
-                :postal_address,
-                :physical_address,
-                :telephone,
-                :email,
-                :fax,
-                :registration_date,
-                :commencement_date,
-                :date_of_first_license,
-                :last_license_renewal,
-                :license_number,
+                :staff_id,
+                :mgt_member_type,
+                :executive_flag,
+                :company_name_01,
+                :company_name_02,
+                :company_name_03,
+                :broad_committee_01,
+                :broad_committee_02,
+                :broad_committee_03,
+                :broad_committee_04,
+                :mgt_committee_01,
+                :mgt_committee_02,
+                :mgt_committee_03,
+                :mgt_committee_04,
                 :feed_date,
                 :feed_status)");
     $stmt->bindParam(':country', $country);
     $stmt->bindParam(':le_book', $le_book);
     $stmt->bindParam(':year_month', $year_month);
-    $stmt->bindParam(':postal_address', $postal_address);
-    $stmt->bindParam(':physical_address', $physical_address);
-    $stmt->bindParam(':telephone', $telephone);
-    $stmt->bindParam(':email', $email);
-    $stmt->bindParam(':fax', $fax);
-    $stmt->bindParam(':registration_date', $registration_date);
-    $stmt->bindParam(':commencement_date', $commencement_date);
-    $stmt->bindParam(':date_of_first_license', $date_of_first_license);
-    $stmt->bindParam(':last_license_renewal', $last_license_renewal);
-    $stmt->bindParam(':license_number', $license_number);
+    $stmt->bindParam(':staff_id', $staff_id);
+    $stmt->bindParam(':mgt_member_type', $mgt_member_type);
+    $stmt->bindParam(':executive_flag', $executive_flag);
+    $stmt->bindParam(':company_name_01', $company_name_01);
+    $stmt->bindParam(':company_name_02', $company_name_02);
+    $stmt->bindParam(':company_name_03', $company_name_03);
+    $stmt->bindParam(':broad_committee_01', $broad_committee_01);
+    $stmt->bindParam(':broad_committee_02', $broad_committee_02);
+    $stmt->bindParam(':broad_committee_03', $broad_committee_03);
+    $stmt->bindParam(':broad_committee_04', $broad_committee_04);
+    $stmt->bindParam(':mgt_committee_01', $mgt_committee_01);
+    $stmt->bindParam(':mgt_committee_02', $mgt_committee_02);
+    $stmt->bindParam(':mgt_committee_03', $mgt_committee_03);
+    $stmt->bindParam(':mgt_committee_04', $mgt_committee_04);
     $stmt->bindParam(':feed_date', $feed_date);
     $stmt->bindParam(':feed_status', $feed_status);
     
@@ -79,16 +88,20 @@
     $country = $_POST['country'];
     $le_book = $_POST['le_book'];
     $year_month = $_POST['year_month'];
-    $postal_address = $_POST['postal_address'];
-    $physical_address = $_POST['physical_address'];
-    $telephone = $_POST['telephone'];
-    $email = $_POST['email'];
-    $fax = $_POST['fax'];
-    $registration_date = $_POST['registration_date'];
-    $commencement_date = $_POST['commencement_date'];
-    $date_of_first_license = $_POST['date_of_first_license'];
-    $last_license_renewal = $_POST['last_license_renewal'];
-    $license_number = $_POST['license_number'];
+    $staff_id = $_POST['staff_id'];
+    $mgt_member_type = $_POST['mgt_member_type'];
+    $executive_flag = $_POST['executive_flag'];
+    $company_name_01 = $_POST['company_name_01'];
+    $company_name_02 = $_POST['company_name_02'];
+    $company_name_03 = $_POST['company_name_03'];
+    $broad_committee_01 = $_POST['broad_committee_01'];
+    $broad_committee_02 = $_POST['broad_committee_02'];
+    $broad_committee_03 = $_POST['broad_committee_03'];
+    $broad_committee_04 = $_POST['broad_committee_04'];
+    $mgt_committee_01 = $_POST['mgt_committee_01'];
+    $mgt_committee_02 = $_POST['mgt_committee_02'];
+    $mgt_committee_03 = $_POST['mgt_committee_03'];
+    $mgt_committee_04 = $_POST['mgt_committee_04'];
     $feed_date = $_POST['feed_date'];
     $feed_status = $_POST['feed_status'];
     $country = $_POST['country'];
@@ -109,13 +122,15 @@
         <?php
         // print_r($_POST);
     }
-    
 
     //redirect back to index page
     //header("Location: index.php");
     // die();
 ?>
-  </div>  
+</div>
+
 </body>
 </html>
+
+
 

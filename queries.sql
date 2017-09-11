@@ -56,3 +56,23 @@ CREATE TABLE shmembers(
     feed_date varchar(10),
     feed_status varchar(2)
 );
+
+
+--stakehold table creation
+CREATE TABLE stakehold(
+        country varchar(2),
+        le_book varchar(3),
+        year_month int,
+        postal_address varchar(300),
+        physical_address varchar(300),
+        telephone varchar(20), 
+        email varchar(80),
+        fax varchar(80),
+        registration_date varchar(20),
+        commencement_date varchar(20),
+        date_of_first_license varchar(20),
+        last_license_renewal varchar(20),
+        license_number varchar(30),
+        feed_date varchar(20),
+        feed_status varchar(2)
+);

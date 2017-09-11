@@ -17,14 +17,15 @@
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <title>Stakehold Details</title>
+    <title>Management Info</title>
 </head>
 <body>
-<?php
-    require_once('../header.php');
+    <?php
+        require_once('../header.php');
     ?>
     <div class="container">
-        <h1>Sharehold Details</h1>
+    
+        <h1>Management Info</h1>
 
         <div class="card">
             <div class="card-body">
@@ -32,80 +33,102 @@
                 <div class="row form-group">
                     <div class="col col-md-4">
                         <label for="country">Country</label>
-                        <input type="text" class="form-control" maxlength="2" value="RW" required="true" name="country">
+                        <input type="text" class="form-control" maxlength="2" required="true" name="country">
                     </div>
                     <div class="col col-md-4">
                         <label for="le_book">LE_Book</label>
-                        <input type="text" class="form-control" maxlength="3" value="030" required="true" name="le_book">
+                        <input type="text" class="form-control" maxlength="3" required="true" name="le_book">
                     </div>
-                </div>
+                </div>  
 
                 <div class="row form-group">
                     <div class="col col-md-4">
                         <label for="year_month">Year-Month</label>
                         <input type="number" class="form-control" maxlength="6" required="true" name="year_month">
                     </div>
-                    
                     <div class="col col-md-4">
-                        <label for="telephone">Telephone</label>
-                        <input type="text" class="form-control" maxlength="20" name="telephone">
+                        <label for="staff_id">Staff ID</label>
+                        <input type="text" class="form-control" maxlength="10" required="true" name="staff_id">
+                    </div>
+                </div>   
+
+                <div class="row form-group">
+                    <div class="col col-md-4">
+                        <label for="mgt_member_type">MGT Member Type</label>
+                        <select name="mgt_member_type" class="form-control">
+                            <option value="1">Board Member</option>
+                            <option value="2">Other Directorship</option>
+                        </select>
+                    </div>
+                    <div class="col col-md-4">
+                        <label for="executive_flag">Executive Flag</label>
+                        <select name="executive_flag" class="form-control">
+                            <option value="Y">Y</option>
+                            <option value="N">N</option>
+                        </select>
+                    </div>
+                </div> 
+
+                <div class="row form-group">
+                    <div class="col col-md-4">
+                        <label for="company_name_01">Company Name 01</label>
+                        <input type="text" class="form-control" maxlength="100" name="company_name_01">
+                    </div>
+                    <div class="col col-md-4">
+                        <label for="company_name_02">Company Name 02</label>
+                        <input type="text" class="form-control" maxlength="100" name="company_name_02">
                     </div>
                 </div>
 
                 <div class="row form-group">
                     <div class="col col-md-4">
-                        <label for="postal_address">Postal Address</label>
-                        <!-- <input type="text" class="form-control" maxlength="300" required="true" name="postal_address"> -->
-                        <textarea name="postal_address" class="form-control" id="" cols="30" rows="10"></textarea>                        
-                    </div>
-
-                    <div class="col col-md-4">
-                        <label for="physical_address">Physical Address</label>
-                        <textarea name="physical_address" class="form-control" id="" cols="30" rows="10"></textarea>
-                        <!-- <input type="text" class="form-control" maxlength="40" required="true" name="physical_address"> -->
-                    </div>
-                
-                </div>
-
-                <div class="row form-group">
-                    <div class="col col-md-4">
-                        <label for="email">Email</label>
-                        <input type="text" class="form-control" maxlength="80" required="true" name="email">
+                        <label for="company_name_03">Company Name 03</label>
+                        <input type="text" class="form-control" maxlength="100" name="company_name_03">
                     </div>
                     <div class="col col-md-4">
-                        <label for="fax">Fax</label>
-                        <input type="text" class="form-control" maxlength="80" required="true" name="fax">
+                        <label for="broad_committee_01">Broad Committee 01</label>
+                        <input type="text" class="form-control" maxlength="100" name="broad_committee_01">
                     </div>
                 </div>
 
                 <div class="row form-group">
                     <div class="col col-md-4">
-                        <label for="registration_date">Registration Date</label>
-                        <input type="date" class="form-control" required="true" name="registration_date">
+                        <label for="broad_committee_02">Broad Committee 02</label>
+                        <input type="text" class="form-control" maxlength="100" name="broad_committee_02">
                     </div>
                     <div class="col col-md-4">
-                        <label for="commencement_date">Commencement date</label>
-                        <input type="date" class="form-control" required="true" name="commencement_date">
+                        <label for="broad_committee_03">Broad Committee 03</label>
+                        <input type="text" class="form-control" maxlength="100" name="broad_committee_03">
                     </div>
                 </div>
 
                 <div class="row form-group">
                     <div class="col col-md-4">
-                        <label for="date_of_first_license">Date of 1st License</label>
-                        <input type="date" class="form-control" maxlength="80" name="date_of_first_license">
+                        <label for="broad_committee_04">Broad Committee 04</label>
+                        <input type="text" class="form-control" maxlength="100" name="broad_committee_04">
                     </div>
                     <div class="col col-md-4">
-                        <label for="last_license_renewal">Last License Renewal</label>
-                        <input type="date" class="form-control" maxlength="80" name="last_license_renewal">
+                        <label for="management_committee_01">Management Committee 01</label>
+                        <input type="text" class="form-control" maxlength="100" name="mgt_committee_01">
                     </div>
                 </div>
 
                 <div class="row form-group">
                     <div class="col col-md-4">
-                        <label for="license_number">License Number</label>
-                        <input type="text" class="form-control" maxlength="30" required="true" name="license_number">
+                        <label for="management_committee_02">Management Committee 02</label>
+                        <input type="text" class="form-control" maxlength="100" name="mgt_committee_02">
                     </div>
+                    <div class="col col-md-4">
+                        <label for="management_committee_03">Management Committee 03</label>
+                        <input type="text" class="form-control" maxlength="100" name="mgt_committee_03">
+                    </div>
+                </div>
 
+                <div class="row form-group">
+                    <div class="col col-md-4">
+                        <label for="management_committee_04">Management Committee 04</label>
+                        <input type="text" class="form-control" maxlength="100" name="mgt_committee_04">
+                    </div>
                     <div class="col col-md-4">
                         <label for="feed_date">Feed Date</label>
                         <input type="date" class="form-control" required="true" name="feed_date">
@@ -113,12 +136,13 @@
                 </div>
 
                 <div class="row form-group">
-        
                     <div class="col col-md-4">
                         <label for="feed_status">Feed Status</label>
                         <input type="text" class="form-control" maxlength="2" required="true" name="feed_status">
-                    </div>
+                    </div>                   
                 </div>
+
+                
 
                 <div class="form-group">
                     <button class="btn btn-primary">Submit</button>
